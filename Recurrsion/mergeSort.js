@@ -1,44 +1,50 @@
-function merge(arr, low, mid, high) {
-    let temp = []
-    let left = low
-    let right = mid + 1
-    while (left <= mid && right <= high) {
-        if (arr[left] <= arr[right]) {
-            temp.push(arr[left])
-            left++
-        } else {
-            temp.push(arr[right])
-            right++
-        }
-    }
+function mergeSort(arr) {
+  if (arr.length <= 1) {
+    return arr; // base case: array is already sorted
+  }
 
-    while(left<=mid){
-        temp.push(arr[left])
-        left++
-    }
+  // divide the array into two halves
+  const middle = Math.floor(arr.length / 2);
+  const left = [];
+  const right = [];
+  for (let i = 0; i < middle; i++) {
+    left.push(arr[i]);
+  }
+  for (let i = middle; i < arr.length; i++) {
+    right.push(arr[i]);
+  }
 
-    while(right<=high){
-        temp.push(arr[right])
-        right++
-    }
+  // recursively sort each half
+  const sortedLeft = mergeSort(left);
+  const sortedRight = mergeSort(right);
 
-    for(let i = low; i<=high; i++){
-        arr[i]= temp[i-low]
+  // merge the two sorted halves
+  const result = [];
+  let i = 0; // index for sortedLeft
+  let j = 0; // index for sortedRight
+  while (i < sortedLeft.length && j < sortedRight.length) {
+    if (sortedLeft[i] <= sortedRight[j]) {
+      result.push(sortedLeft[i]);
+      i++;
+    } else {
+      result.push(sortedRight[j]);
+      j++;
     }
-   
-    console.log("temp", temp)
+  }
+  // concatenate any remaining elements from both arrays
+  while (i < sortedLeft.length) {
+    result.push(sortedLeft[i]);
+    i++;
+  }
+  while (j < sortedRight.length) {
+    result.push(sortedRight[j]);
+    j++;
+  }
+
+  return result;
 }
 
-function ms( arr, low, high){
-    if(low<=high){
-        return
-    }
-    let mid = (low+high)/2
-    ms(arr, low, mid)
-    ms(arr, mid+1, high)
-    merge(arr, low, mid, high)
-    console.log("arr", arr)
-}
-
-let arr = [1,2,4,5,8,3,45,8,5,4,8]
-ms(arr,0,arr.length)
+// example usage
+const arr = [6, 5, 3, 1, 8, 7, 2, 4];
+const sortedArr = mergeSort(arr);
+console.log(sortedArr); // output: [1, 2, 3, 4, 5, 6, 7, 8]
