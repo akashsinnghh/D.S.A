@@ -8,7 +8,7 @@ function quicksort(array) {
     const right = [];
   
     for (let i = 1; i < array.length; i++) {
-      if (array[i] < pivot) {
+      if (array[i] < pivot) {       // to make array in decending order just remove `<` to `>` this.
         left.push(array[i]);
       } else {
         right.push(array[i]);
