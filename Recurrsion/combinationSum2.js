@@ -34,35 +34,23 @@ const target = 8;
 console.log(combinationSum2(candidates, target));
 
 
+// 1 - First, we sort the candidates array in ascending order so that we can easily skip duplicates later on.
 
-                                        // Using Sets
+// 2 - Then, we define a result array to store the valid combinations.
 
+// 3 - Next, we define the backtrack function which takes three parameters: start, currentSum, and currentList. 
+//     start represents the starting index of the candidates array for the current recursion level, currentSum represents the current sum of
+//     the elements in currentList, and currentList represents the current list of elements we've selected so far.
 
-// function combinationSum2(candidates, target) {
-//   const result = [];
-//   candidates.sort((a, b) => a - b); // sort candidates array in ascending order
-//   backtrack(0, target, new Set()); // start the recursion with empty selected set
-//   return result;
+// 4 - Inside the backtrack function, we first check if currentSum is equal to target. If it is, then we've found a valid combination 
+//     and we push a copy of currentList to the result array.
 
-//   function backtrack(start, target, selected) {
-//     if (target === 0) {
-//       result.push([...selected]); // found a valid combination, add a copy to the result array
-//       return;
-//     }
-//     if (target < 0) {
-//       return; // sum exceeds the target, backtrack
-//     }
+// 5 - Next, we loop through the candidates array starting from index start. We use a check to skip over duplicates in the array. 
+//     If the sum of the current element and currentSum is greater than target, then we know we won't find a valid combination down
+//     this branch of the recursion tree, so we break out of the loop. Otherwise, we add the current element to currentList, 
+//     and recursively call backtrack with the updated parameters.
 
-//     for (let i = start; i < candidates.length; i++) {
-//       if (i > start && candidates[i] === candidates[i - 1]) continue; // skip duplicates
-//       selected.add(candidates[i]); // include the current candidate in the selected set
-//       backtrack(i + 1, target - candidates[i], selected); // recursively call with updated target and selected set
-//       selected.delete(candidates[i]); // remove the current candidate from the selected set for backtracking
-//     }
-//   }
-// }
+// 6 - Finally, we call backtrack with initial values of start set to 0, currentSum set to 0, and an empty currentList. We then return the result array.
 
-// const candidates = [10, 1, 2, 7, 6, 1, 5];
-// const target = 8;
-// console.log(combinationSum2(candidates, target));
+// 7 - We test the function by calling it with the given candidates array and target, and log the result to the console.
 
