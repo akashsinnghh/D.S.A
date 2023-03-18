@@ -7,35 +7,8 @@
 
 // write code in js and use recurrsion
 
-                                               //without base case..........
 
-function printAllSubsets(arr, n, sum = 0, index = 0, output = []) {
-  // Push the current sum to the output array
-  output.push(sum);
-
-  // Recursively call the function for all remaining elements in the array
-  for (let i = index; i < n; i++) {
-    // Include the current element in the sum
-    sum += arr[i];
-
-    // Recursively call the function for the remaining subset
-    printAllSubsets(arr, n, sum, i + 1, output);
-
-    // Exclude the current element from the sum
-    sum -= arr[i];
-  }
-
-  // Return the output array
-  return output;
-}
-
-// Example usage
-const arr = [3,1,2];
-const n = arr.length;
-const output = printAllSubsets(arr, n);
-console.log(output.sort());
-
-                                                      // with base case
+                                    // with base case.........
 
 function printAllSubsets(arr, n, sum = 0, index = 0, output = []) {
   // Base case: when all elements have been included in the subset
@@ -63,3 +36,32 @@ const arr = [3, 1, 2];
 const n = arr.length;
 const output = printAllSubsets(arr, n);
 console.log(output);
+
+
+                                               //without base case..........
+
+// function printAllSubsets(arr, n, sum = 0, index = 0, output = []) {
+//   // Push the current sum to the output array
+//   output.push(sum);
+
+//   // Recursively call the function for all remaining elements in the array
+//   for (let i = index; i < n; i++) {
+//     // Include the current element in the sum
+//     sum += arr[i];
+
+//     // Recursively call the function for the remaining subset
+//     printAllSubsets(arr, n, sum, i + 1, output);
+
+//     // Exclude the current element from the sum
+//     sum -= arr[i];
+//   }
+
+//   // Return the output array
+//   return output;
+// }
+
+// // Example usage
+// const arr = [3,1,2];
+// const n = arr.length;
+// const output = printAllSubsets(arr, n);
+// console.log(output.sort());
