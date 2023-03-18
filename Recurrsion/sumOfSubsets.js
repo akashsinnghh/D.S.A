@@ -5,11 +5,6 @@
 // Output: 
 // [0, 1, 2, 3, 3, 4, 5, 6]
 
-// Explaination :
-// When no elements in taken tehn sum = 0
-// when only 2 is taken then sum = 2 
-// when only 3 is taken them sum = 3
-// when element 2 and 3 are taken then sum = 2+3 = 5
 // write code in js and use recurrsion
 
 function printAllSubsets(arr, n, sum = 0, index = 0, output = []) {
