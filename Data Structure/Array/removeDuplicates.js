@@ -14,3 +14,16 @@ function getUnique(arr){
 const array = [1, 2, 3, 2, 3];
 
 getUnique(array);
+
+//                                                 Or
+
+function dupli(arr){
+    let arr3 = []
+    for(let i=0;i<arr.length;i++){
+        if(!arr3.includes(arr[i])){  // here we are use `includes` which returns true if element is not present
+            arr3.push(arr[i])          // if value is not present in `arr3` then value will get pushed in arr3.
+        }
+    }
+    console.log(arr3)
+}
+dupli(array)
