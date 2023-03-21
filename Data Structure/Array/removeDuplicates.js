@@ -40,3 +40,16 @@ dupli(array)
 	}
 	console.log(removeDuplicates(array));
 
+//						  Or
+
+function filter(arr){
+    let res = []
+    let i=0
+    while(i<arr.length){
+        return arr.filter(function(item,index){
+            return index == arr.indexOf(arr[index])
+        })
+        i++
+    }
+}
+
