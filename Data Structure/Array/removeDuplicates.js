@@ -27,3 +27,16 @@ function dupli(arr){
     console.log(arr3)
 }
 dupli(array)
+
+//                                                  Or
+	
+	function removeDuplicates(arr) {
+		let unique = arr.reduce(function (acc, curr) {
+			if (!acc.includes(curr))
+				acc.push(curr);
+			return acc;
+		}, []);
+		return unique;
+	}
+	console.log(removeDuplicates(array));
+
