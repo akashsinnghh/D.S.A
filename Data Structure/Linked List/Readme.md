@@ -5,9 +5,11 @@ A linked list is a collection of nodes in non-contiguous memory locations where 
 ![Linked list](https://user-images.githubusercontent.com/86508200/226925875-04315102-7635-47bd-b258-4d35f29091f5.png)
 
 Following are the terms used in Linked Lists :<br>
-  ● Node:A node in a singly linked list contains two fields ○ Datafield which stores the data at the node ○ A pointerthat contains the address of the next node in the sequence. 
-  ● Head:The first node in a linked list is called the head. The head is always used as a reference to traverse the list. 
-  ● Tail: The last node in a linked list is called the tail. It always contains a pointer to NULL (since the next node is NULL), denoting the end of a linked list.
+  ● Node:A node in a singly linked list contains two fields ○ Datafield which stores the data at the node ○ A pointerthat contains the address of the next node in the sequence. <br>
+  ● Head:The first node in a linked list is called the head. The head is always used as a reference to traverse the list. <br>
+  ● Tail: The last node in a linked list is called the tail. It always contains a pointer to NULL (since the next node is NULL), denoting the end of a linked list.<br>
+  
+ Biggest question is WHY and WHAT is the use of linked list in DS ?
 
 How to master Linked List:-
  Link :- https://dynalist.io/d/5SccLds9RQxoDmuzkuCRE2ki
