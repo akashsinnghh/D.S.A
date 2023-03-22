@@ -26,6 +26,4 @@ Following are the terms used in Linked Lists :<br>
 
 To master Linked List, check out this link: [https://dynalist.io/d/5SccLds9RQxoDmuz
 
-How to master Linked List:-
- Link :- https://dynalist.io/d/5SccLds9RQxoDmuzkuCRE2ki
 
