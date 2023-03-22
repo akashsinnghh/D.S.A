@@ -20,7 +20,6 @@ Following are the terms used in Linked Lists :<br>
 | 5. It is Contiguous which means | 5. It is Non-Contiguous which means |
 | ![image of contiguous array](https://user-images.githubusercontent.com/86508200/226931273-b7bc6add-3ab7-4318-aaf2-c4fbd63f1eb0.png) | ![image](https://user-images.githubusercontent.com/86508200/226934523-e5f8e5e7-a9bb-4e04-bdea-40483a0ccfa4.png) so this happen's in linked where a collection can be stored anywhere where ever it get's empty memory. Just the thing is data is stored in not a continue memory space. |
 | **Cons:** | **Cons**: |
-| --- | --- |
 | 1. Fixed size | 1. Linear time access to elements |
 | 2. Inefficient for large collections or frequent insertion/deletion of elements | 2. More complex to implement and use than arrays |
 | 3. Not cache-friendly | 3. May waste memory if not fully utilized |
