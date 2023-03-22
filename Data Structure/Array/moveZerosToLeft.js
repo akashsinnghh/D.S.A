@@ -1,19 +1,30 @@
-let array = [1,10,-1,11,5,0,-7,0,25,-35]
-
 let moveZerosToLeft = function(A) {
-   let zeros =0
-  let i = 0, k=0
-  while(i<A.length){
-    if(A[i] == 0){
-        zeros++
-      while(k<zeros){
-          A[k] = 0
-          k++
-      }
-      A.splice(i,1)
-    }
-    i++
+  if (A.length < 1) {
+    return;
   }
-  return A
-}
-console.log(moveZerosToLeft(array))
+
+  let lengthA = A.length;
+  let writeIndex = lengthA - 1;
+  let readIndex = lengthA - 1;
+
+  while (readIndex >= 0) {
+    if (A[readIndex] != 0) {
+      A[writeIndex] = A[readIndex];
+      writeIndex--;
+    }
+    
+    readIndex--;
+  }
+  
+  while (writeIndex >= 0) {
+    A[writeIndex] = 0;
+    writeIndex--;
+  }
+};
+
+let v = [1, 10, 20, 0, 59, 63, 0, 88, 0];
+console.log("Original Array: [" + v + "]");
+
+moveZerosToLeft(v);
+
+console.log("After Moving Zeros: [" + v+ "]");
