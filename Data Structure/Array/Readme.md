@@ -4,9 +4,10 @@ Operations :
 1. Traversal
 2. Insertion
 3. Deletion
-4. Searching 
+4. Searching
+5. Maximum and Minimum
                                     These will be doing further
-5. Sorting
+6. Sorting
 
 
 Website i follow:- 1. https://igotanoffer.com/blogs/tech/array-interview-questions
