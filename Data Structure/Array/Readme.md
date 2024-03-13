@@ -6,7 +6,7 @@ Operations :
 3. Deletion
 4. Searching
 5. Maximum and Minimum
-                                    /nThese will be doing further
+                                    These will be doing further
 6. Sorting
 
 
